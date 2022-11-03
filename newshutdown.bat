@@ -1,9 +1,8 @@
 echo off
-TIMEOUT /T 5
-set /a starttime = 10
+set /a starttime = 15
 cls
 start play.vbs
-shutdown -s -t 15
+
 :looped
 echo Shutting down in %starttime% seconds
 set /a starttime = %starttime% - 1
@@ -18,3 +17,4 @@ goto ending
 goto looped
 
 :ending
+shutdown -s -t 0
